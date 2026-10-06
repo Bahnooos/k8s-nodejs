@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+  labels:
+    app: nodejs
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nodejs
+  template:
+    metadata:
+      name: nodejs-pod
+      labels:
+        app: nodejs
+    spec:
+      containers:
+      - name: nodejs-app
+        image: nodejs-backend:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
