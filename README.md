@@ -1,4 +1,4 @@
-# k8s-nodejs-migration
+# k8s-nodejs
 
 A simple Node.js web application containerized with Docker and deployed to Kubernetes. This project demonstrates a static landing page served by Express, packaged for container deployment, and exposed through Kubernetes resources such as a Deployment, Service, and Ingress.
 
